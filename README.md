@@ -80,4 +80,4 @@ src/
 
 ## 👤 Author
 
-- [@nixiz0](https://github.com/nixiz0).
+- [@nixiz0](https://github.com/nixiz0)
