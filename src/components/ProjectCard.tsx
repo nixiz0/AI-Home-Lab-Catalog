@@ -11,6 +11,10 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project, isFavorite, onToggleFavorite }: ProjectCardProps) {
   const { t } = useI18n();
+  const visitLabel = project.websiteLabelKey ? t(project.websiteLabelKey) : t("card.links.visit");
+  const featuredLinks = project.extraLinks
+    ? [{ label: visitLabel, url: project.websiteUrl }, ...project.extraLinks.map((link) => ({ label: t(link.labelKey), url: link.url }))]
+    : [];
 
   return (
     <article className="project-card group flex min-h-[540px] flex-col rounded-lg border border-white/10 bg-surface/80 p-4 shadow-[0_18px_56px_rgba(0,0,0,0.24)] transition duration-300 hover:-translate-y-1 hover:border-ice-blue/30 hover:bg-[#242424]/90 sm:p-5">
@@ -51,6 +55,24 @@ export function ProjectCard({ project, isFavorite, onToggleFavorite }: ProjectCa
         ))}
       </div>
 
+      {featuredLinks.length > 0 ? (
+        <div className="mb-4 flex flex-wrap gap-2">
+          {featuredLinks.map((link) => (
+            <a
+              className="inline-flex min-h-9 items-center gap-1.5 rounded-md border border-ice-blue/20 bg-ice-blue/10 px-3 text-xs font-black text-ice-blue transition hover:border-ice-blue/45 hover:bg-ice-blue/15"
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${project.name} ${link.label}`}
+              key={link.url}
+            >
+              <ExternalLink size={16} />
+              {link.label}
+            </a>
+          ))}
+        </div>
+      ) : null}
+
       <p className="mb-4 text-sm leading-7 text-text-primary/90">{t(project.summaryKey)}</p>
 
       <div className="border-l-2 border-bright-gold py-1 pl-3">
@@ -89,16 +111,18 @@ export function ProjectCard({ project, isFavorite, onToggleFavorite }: ProjectCa
 
       <div className="mt-auto flex flex-col gap-3 pt-5 text-xs font-bold text-text-secondary sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-wrap gap-2 sm:justify-end">
-          <a
-            className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/10 px-2.5 text-text-primary transition hover:border-ice-blue/35 hover:text-ice-blue"
-            href={project.websiteUrl}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`${project.name} ${t("card.links.visit")}`}
-          >
-            <ExternalLink size={16} />
-            {t("card.links.visit")}
-          </a>
+          {featuredLinks.length === 0 ? (
+            <a
+              className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/10 px-2.5 text-text-primary transition hover:border-ice-blue/35 hover:text-ice-blue"
+              href={project.websiteUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${project.name} ${visitLabel}`}
+            >
+              <ExternalLink size={16} />
+              {visitLabel}
+            </a>
+          ) : null}
           {project.repoUrl ? (
             <a
               className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/10 px-2.5 text-text-primary transition hover:border-ice-blue/35 hover:text-ice-blue"

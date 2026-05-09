@@ -14,11 +14,14 @@ import {
   Search,
   ShieldCheck,
   SlidersHorizontal,
+  type LucideIcon,
 } from "lucide-react";
+import { AdvancedLabPage } from "./AdvancedLabPage";
 import { CatalogFilters } from "../components/CatalogFilters";
 import { EmptyState } from "../components/EmptyState";
 import { LanguageSwitch } from "../components/LanguageSwitch";
 import { ProjectCard } from "../components/ProjectCard";
+import { SiteFooter } from "../components/SiteFooter";
 import { StatPill } from "../components/StatPill";
 import { projects } from "../data/projects";
 import { categories } from "../data/taxonomy";
@@ -27,8 +30,11 @@ import { useI18n } from "../i18n/I18nProvider";
 import { filterProjects, getCategoryCounts } from "../utils/catalog";
 import type { CategoryId } from "../types/catalog";
 
+type PageView = "catalog" | "advanced";
+
 export function App() {
   const { t } = useI18n();
+  const [activePage, setActivePage] = useState<PageView>(() => (window.location.hash === "#advanced-lab" ? "advanced" : "catalog"));
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<CategoryId>("all");
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
@@ -67,6 +73,12 @@ export function App() {
     setShowFavoritesOnly((value) => !value);
   };
 
+  const navigateToPage = (page: PageView) => {
+    setActivePage(page);
+    window.history.replaceState(null, "", page === "advanced" ? "#advanced-lab" : "#catalog");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="site-shell min-h-screen overflow-x-hidden bg-background text-text-primary">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-background/75 backdrop-blur-2xl">
@@ -86,16 +98,26 @@ export function App() {
           </a>
 
           <div className="flex shrink-0 items-center gap-2">
+            <nav className="hidden items-center gap-2 sm:flex" aria-label={t("nav.label")}>
+              <PageNavButton active={activePage === "catalog"} icon={Boxes} label={t("nav.catalog")} onClick={() => navigateToPage("catalog")} />
+              <PageNavButton active={activePage === "advanced"} icon={Cpu} label={t("nav.advanced")} onClick={() => navigateToPage("advanced")} />
+            </nav>
             <LanguageSwitch />
           </div>
         </div>
+        <nav className="mx-auto flex w-[min(1180px,calc(100%-1.5rem))] gap-2 pb-3 sm:hidden" aria-label={t("nav.label")}>
+          <PageNavButton active={activePage === "catalog"} icon={Boxes} label={t("nav.catalog")} onClick={() => navigateToPage("catalog")} />
+          <PageNavButton active={activePage === "advanced"} icon={Cpu} label={t("nav.advanced")} onClick={() => navigateToPage("advanced")} />
+        </nav>
       </header>
 
       <main className="mx-auto w-[min(1180px,calc(100%-1.5rem))] pb-16 sm:w-[min(1180px,calc(100%-2rem))] lg:pb-24">
-        <section
-          className="relative grid min-h-[calc(100vh-72px)] grid-cols-1 items-center gap-8 overflow-hidden py-10 sm:py-14 lg:grid-cols-[minmax(0,1.03fr)_minmax(340px,0.72fr)] lg:gap-10"
-          aria-labelledby="hero-title"
-        >
+        {activePage === "catalog" ? (
+          <>
+            <section
+              className="relative grid min-h-[calc(100vh-72px)] grid-cols-1 items-center gap-8 overflow-hidden py-10 sm:py-14 lg:grid-cols-[minmax(0,1.03fr)_minmax(340px,0.72fr)] lg:gap-10"
+              aria-labelledby="hero-title"
+            >
           <div className="relative z-10 max-w-3xl animate-fade-up">
             <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-ice-blue/20 bg-ice-blue/10 px-3 py-1.5 text-xs font-black uppercase text-ice-blue">
               <LockKeyhole size={14} aria-hidden="true" />
@@ -207,9 +229,9 @@ export function App() {
               <StatPill icon={ShieldCheck} label={t("stats.licenseAware")} value={t("stats.yes")} />
             </div>
           </div>
-        </section>
+            </section>
 
-        <section id="catalog" className="relative scroll-mt-24 pt-8" aria-labelledby="catalog-title">
+            <section id="catalog" className="relative scroll-mt-24 pt-8" aria-labelledby="catalog-title">
           <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="mb-2 text-xs font-black uppercase text-bright-gold">{t("catalog.eyebrow")}</p>
@@ -266,8 +288,42 @@ export function App() {
           ) : (
             <EmptyState onReset={resetFilters} />
           )}
-        </section>
+            </section>
+          </>
+        ) : (
+          <AdvancedLabPage />
+        )}
       </main>
+      <SiteFooter />
     </div>
+  );
+}
+
+function PageNavButton({
+  active,
+  icon: Icon,
+  label,
+  onClick,
+}: {
+  active: boolean;
+  icon: LucideIcon;
+  label: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      className={[
+        "inline-flex min-h-9 flex-1 items-center justify-center gap-2 rounded-lg border px-3 text-xs font-black transition duration-200 sm:flex-none",
+        active
+          ? "border-bright-gold/45 bg-gold/15 text-bright-gold"
+          : "border-white/10 bg-white/[0.04] text-text-secondary hover:border-ice-blue/35 hover:bg-ice-blue/10 hover:text-ice-blue",
+      ].join(" ")}
+      type="button"
+      aria-pressed={active}
+      onClick={onClick}
+    >
+      <Icon size={16} />
+      <span>{label}</span>
+    </button>
   );
 }

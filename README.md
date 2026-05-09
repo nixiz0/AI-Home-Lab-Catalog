@@ -26,6 +26,7 @@ AI Home Lab Catalog helps people discover practical AI tools they can run locall
 - English and French interface with typed translation parity.
 - Browser-persisted favorites and language preference.
 - Essential project cards with category, use case, license context, tags, and useful links.
+- Dedicated AI engineer lab page for data science, ML, MLOps, LLM evaluation, and learning resources.
 - Custom SVG favicon and premium dark visual system.
 
 ## 🛠️ Tech Stack
@@ -72,6 +73,7 @@ src/
 ## 🧭 Maintenance
 
 - Add or edit catalog entries in `src/data/projects.ts`.
+- Add or edit advanced lab resources in `src/data/advancedResources.ts`.
 - Edit localized copy in `src/i18n/locales/en.ts` and `src/i18n/locales/fr.ts`; English defines the required key set and TypeScript validates French parity during `npm run build`.
 - Keep most styling in Tailwind utilities. Use `src/styles/index.css` only for global tokens, custom visual effects, and keyframes.
 - Read `ARCHITECTURE.md` for the short technical onboarding guide.

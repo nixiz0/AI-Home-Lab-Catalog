@@ -31,6 +31,8 @@ Favorites are managed by `src/hooks/useFavorites.ts`, with storage safety helper
 
 Catalog entries live in `src/data/projects.ts`. Category definitions live in `src/data/taxonomy.ts`. Shared TypeScript types are in `src/types/catalog.ts`.
 
+Advanced AI engineer lab resources live in `src/data/advancedResources.ts`, with shared types in `src/types/advanced.ts` and filtering helpers in `src/utils/advancedResources.ts`.
+
 Project text uses translation keys instead of inline strings. English defines the key set, and other locales must satisfy it at TypeScript build time. Edit localized copy in:
 
 - `src/i18n/locales/en.ts`
@@ -41,8 +43,10 @@ Keep translation keys identical across locales.
 ## UI Organization
 
 - `App.tsx`: page shell, hero, search, catalog orchestration.
+- `AdvancedLabPage.tsx`: technical resource page for data science, ML, MLOps, LLM evaluation, and learning resources.
 - `components/CatalogFilters.tsx`: horizontal category and favorites filters.
 - `components/ProjectCard.tsx`: project presentation, category badges, essential metadata, favorite control, and external links.
+- `components/AdvancedResourceCard.tsx`: advanced resource presentation, metadata, tags, and official links.
 - `components/LanguageSwitch.tsx`: language selection.
 - `components/StatPill.tsx` and `components/EmptyState.tsx`: small reusable UI.
 
@@ -64,4 +68,4 @@ npm.cmd run lint
 npm.cmd run build
 ```
 
-When adding a project, update `src/data/projects.ts` and both locale files. When adding a language, update `src/i18n/types.ts`, `I18nProvider`, locale files, and `LanguageSwitch`.
+When adding a project, update `src/data/projects.ts` and both locale files. When adding an advanced lab resource, update `src/data/advancedResources.ts` and both locale files. When adding a language, update `src/i18n/types.ts`, `I18nProvider`, locale files, and `LanguageSwitch`.

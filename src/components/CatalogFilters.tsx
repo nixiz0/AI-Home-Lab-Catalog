@@ -5,6 +5,7 @@ import {
   Image,
   LayoutDashboard,
   ServerCog,
+  Smartphone,
   Workflow,
 } from "lucide-react";
 import { useI18n } from "../i18n/I18nProvider";
@@ -24,6 +25,7 @@ type CatalogFiltersProps = {
 const categoryIcons = {
   all: Boxes,
   apps: LayoutDashboard,
+  mobile: Smartphone,
   models: Cpu,
   servers: ServerCog,
   images: Image,

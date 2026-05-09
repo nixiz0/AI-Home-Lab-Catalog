@@ -2,6 +2,7 @@ import { defaultLocale, supportedLocales, type Locale } from "../i18n/types";
 
 const languageStorageKey = "ai-home-lab:language:v1";
 const favoritesStorageKey = "ai-home-lab:favorites:v1";
+export const advancedFavoritesStorageKey = "ai-home-lab:advanced-favorites:v1";
 
 export function readStoredLocale(): Locale {
   const storedLocale = safeLocalStorageGet(languageStorageKey);
@@ -18,8 +19,8 @@ export function writeStoredLocale(locale: Locale) {
   safeLocalStorageSet(languageStorageKey, locale);
 }
 
-export function readStoredFavorites(validIds: Set<string>) {
-  const rawValue = safeLocalStorageGet(favoritesStorageKey);
+export function readStoredFavorites(validIds: Set<string>, storageKey = favoritesStorageKey) {
+  const rawValue = safeLocalStorageGet(storageKey);
 
   if (!rawValue) {
     return new Set<string>();
@@ -38,9 +39,9 @@ export function readStoredFavorites(validIds: Set<string>) {
   }
 }
 
-export function writeStoredFavorites(favoriteIds: Set<string>, projectOrder: string[]) {
+export function writeStoredFavorites(favoriteIds: Set<string>, projectOrder: string[], storageKey = favoritesStorageKey) {
   const orderedIds = projectOrder.filter((projectId) => favoriteIds.has(projectId));
-  safeLocalStorageSet(favoritesStorageKey, JSON.stringify(orderedIds));
+  safeLocalStorageSet(storageKey, JSON.stringify(orderedIds));
 }
 
 function isSupportedLocale(value: string | null): value is Locale {

@@ -1,5 +1,13 @@
 export const en = {
   "header.source": "Source",
+  "nav.label": "Main navigation",
+  "nav.catalog": "Catalog",
+  "nav.advanced": "AI engineer lab",
+  "footer.tagline": "Curated by Initium for private local AI builders.",
+  "footer.social.label": "Social",
+  "footer.social.youtube": "YouTube",
+  "footer.social.instagram": "Instagram",
+  "footer.social.linkedin": "LinkedIn",
   "hero.eyebrow": "Private local AI guild",
   "hero.subtitle":
     "Explore a curated, trustworthy map of open-source and self-hosted AI tools for a private home lab: chat interfaces, inference servers, voice models, image generators, automations, RAG, and agent frameworks.",
@@ -32,10 +40,13 @@ export const en = {
   "card.links.visit": "Visit",
   "card.links.repo": "Repo",
   "card.links.docs": "Docs",
+  "card.links.android": "Android",
+  "card.links.ios": "iOS",
   "card.favorite.add": "Add to favorites",
   "card.favorite.remove": "Remove from favorites",
   "category.all": "All",
   "category.apps": "Apps",
+  "category.mobile": "Mobile",
   "category.models": "Models",
   "category.servers": "AI servers",
   "category.images": "Images",
@@ -48,12 +59,140 @@ export const en = {
   "commercial.caution": "Check obligations",
   "commercial.restricted": "Restricted use",
   "commercial.proprietary": "Free for work",
+  "advanced.eyebrow": "Technical lab",
+  "advanced.title": "AI engineer lab",
+  "advanced.subtitle":
+    "A focused map for data scientists and AI engineers building local experiments, reproducible datasets, model training loops, LLM prototypes, and evaluation workflows.",
+  "advanced.snapshot.title": "Lab stack",
+  "advanced.snapshot.resources": "Resources",
+  "advanced.snapshot.open": "Open source",
+  "advanced.snapshot.openValue": "Most",
+  "advanced.snapshot.local": "Local-ready",
+  "advanced.snapshot.localValue": "Yes",
+  "advanced.snapshot.updated": "Checked",
+  "advanced.flow.eyebrow": "Build order",
+  "advanced.flow.title": "A practical local AI workflow",
+  "advanced.flow.helper": "Start with notebooks and data, move into models, then add tracking, versioning, scale, and comparison.",
+  "advanced.flow.notebooks.title": "Start in notebooks",
+  "advanced.flow.notebooks.body": "Use interactive Python workspaces for exploration, demos, and reproducible experiments.",
+  "advanced.flow.data.title": "Explore data",
+  "advanced.flow.data.body": "Load files, query local datasets, and prepare embeddings or vector search for RAG.",
+  "advanced.flow.model.title": "Train baselines",
+  "advanced.flow.model.body": "Use classical ML, boosting, and deep learning where each one fits the problem.",
+  "advanced.flow.llm.title": "Prototype LLM systems",
+  "advanced.flow.llm.body": "Connect model libraries, vector stores, comparisons, and explainers for local AI apps.",
+  "advanced.flow.opsEval.title": "Track and evaluate",
+  "advanced.flow.opsEval.body": "Record runs, tune parameters, scale workloads, and compare model behavior.",
+  "advanced.flow.visualization.title": "Visualize results",
+  "advanced.flow.visualization.body": "Turn metrics, distributions, errors, and model outputs into readable figures.",
+  "advanced.flow.deep.title": "Build deep models",
+  "advanced.flow.deep.body": "Move to GPU frameworks, transformers, fine-tuning, and accelerated research loops.",
+  "advanced.flow.ops.title": "Make it reproducible",
+  "advanced.flow.ops.body": "Track runs, version data, manage artifacts, and scale workloads beyond one process.",
+  "advanced.flow.evaluate.title": "Compare and learn",
+  "advanced.flow.evaluate.body": "Use leaderboards, curated lists, and visual explainers to choose models with context.",
+  "advanced.directory.eyebrow": "Advanced directory",
+  "advanced.directory.title": "Tools for technical AI labs",
+  "advanced.directory.helper": "Filter by stack layer, search by task, and jump to official docs, repositories, and references.",
+  "advanced.search.label": "Search the AI engineer lab",
+  "advanced.search.placeholder": "Search libraries, tasks, licenses, or stack layers...",
+  "advanced.filters.label": "Advanced resource filters",
+  "advanced.card.bestFor": "Best for",
+  "advanced.empty.title": "No matching resource",
+  "advanced.empty.description": "Try another keyword or reset the technical resource filters.",
+  "advanced.category.all": "All",
+  "advanced.category.notebooks": "Notebooks",
+  "advanced.category.data": "Data & vectors",
+  "advanced.category.modeling": "Modeling",
+  "advanced.category.opsEval": "Ops & eval",
+  "advanced.category.visualization": "Visualization",
+  "advanced.category.ml": "Classical ML",
+  "advanced.category.deepLearning": "Deep learning",
+  "advanced.category.llm": "LLMs",
+  "advanced.category.mlops": "MLOps",
+  "advanced.category.evaluation": "Evaluation",
+  "advanced.category.learning": "Learning",
+  "advanced.resource.numpy.summary":
+    "Foundation of numerical Python with fast arrays, linear algebra, broadcasting, and the tensor-like data structures used across the ecosystem.",
+  "advanced.resource.numpy.fit": "Core math, array manipulation, vectorized preprocessing, and glue code behind most Python ML stacks.",
+  "advanced.resource.pandas.summary":
+    "DataFrame toolkit for cleaning, joining, aggregating, reshaping, and exporting structured data from CSV, SQL, Parquet, Excel, and APIs.",
+  "advanced.resource.pandas.fit": "Readable ETL, feature engineering, time series work, and exploratory analysis on medium-size datasets.",
+  "advanced.resource.polars.summary":
+    "Rust-powered DataFrame engine with lazy execution, query optimization, streaming, and strong performance for analytical pipelines.",
+  "advanced.resource.polars.fit": "Fast local transforms on larger tabular datasets when pandas starts to feel slow or memory-heavy.",
+  "advanced.resource.duckdb.summary":
+    "Embedded analytical SQL database that queries local files, Parquet, and in-process data without standing up a database server.",
+  "advanced.resource.duckdb.fit": "Local OLAP, dataset inspection, feature extraction, and SQL-first exploration inside notebooks or scripts.",
+  "advanced.resource.jupyterlab.summary":
+    "Browser-based computational workspace for notebooks, terminals, editors, plots, and interactive data science experiments.",
+  "advanced.resource.jupyterlab.fit": "Iterative research, teaching, debugging, and quick local prototypes before moving code into packages.",
+  "advanced.resource.marimo.summary":
+    "Reactive Python notebook stored as pure Python, with SQL support, deterministic execution, app deployment, and Git-friendly workflows.",
+  "advanced.resource.marimo.fit": "Reproducible notebooks, lightweight internal apps, explainable experiments, and version-controlled AI lab work.",
+  "advanced.resource.qdrant.summary":
+    "Open-source vector database and vector search engine for embeddings, semantic search, hybrid search, recommendations, and RAG systems.",
+  "advanced.resource.qdrant.fit": "Local or self-hosted vector storage when your lab needs retrieval over documents, images, or embedding collections.",
+  "advanced.resource.scikitLearn.summary":
+    "Essential Python machine-learning toolkit for preprocessing, model selection, regression, classification, clustering, and metrics.",
+  "advanced.resource.scikitLearn.fit": "Strong baselines, tabular ML, interpretable workflows, pipelines, and evaluation before deep learning.",
+  "advanced.resource.xgboost.summary":
+    "Highly optimized gradient boosting library for accurate tree ensembles across single-machine and distributed environments.",
+  "advanced.resource.xgboost.fit": "Competitive tabular modeling, ranking, structured prediction, and high-quality baselines.",
+  "advanced.resource.lightgbm.summary":
+    "Fast gradient boosting framework with efficient training, histogram-based trees, ranking support, and strong tabular performance.",
+  "advanced.resource.lightgbm.fit": "Large tabular datasets, quick iteration, ranking tasks, and resource-efficient boosted trees.",
+  "advanced.resource.optuna.summary":
+    "Hyperparameter optimization framework with define-by-run search spaces, pruning, samplers, dashboards, and experiment integrations.",
+  "advanced.resource.optuna.fit": "Automatic tuning for scikit-learn, boosting, deep learning, and local experiment sweeps.",
+  "advanced.resource.pytorch.summary":
+    "Flexible deep learning framework with dynamic computation, GPU acceleration, autograd, and a broad research-to-production ecosystem.",
+  "advanced.resource.pytorch.fit": "Custom neural networks, fine-tuning, computer vision, NLP, LLM work, and research-heavy workflows.",
+  "advanced.resource.tensorflow.summary":
+    "Google deep learning framework with Keras, production deployment paths, TensorBoard, and edge/mobile deployment options.",
+  "advanced.resource.tensorflow.fit": "Production-oriented training, Keras workflows, model serving, TensorBoard, and TensorFlow Lite paths.",
+  "advanced.resource.jax.summary":
+    "High-performance array computing library with composable transforms for JIT compilation, vectorization, automatic differentiation, and accelerator scaling.",
+  "advanced.resource.jax.fit": "Research code, differentiable programming, TPU/GPU experiments, and NumPy-style accelerated kernels.",
+  "advanced.resource.transformers.summary":
+    "Model-definition framework for pretrained text, vision, audio, video, and multimodal transformer models across training and inference stacks.",
+  "advanced.resource.transformers.fit": "Using, fine-tuning, comparing, and packaging LLM and multimodal models from the Hugging Face ecosystem.",
+  "advanced.resource.mlflow.summary":
+    "Open-source AI engineering platform for tracking experiments, managing models, evaluating LLM apps, prompts, traces, and production workflows.",
+  "advanced.resource.mlflow.fit": "Run tracking, model registry, local experiment history, LLM evaluation, and reproducible AI app development.",
+  "advanced.resource.dvc.summary":
+    "Data and model versioning tool that works with Git while storing large artifacts locally, on NAS, or in remote object storage.",
+  "advanced.resource.dvc.fit": "Reproducible datasets, model artifacts, pipeline stages, and collaboration without committing large files to Git.",
+  "advanced.resource.ray.summary":
+    "Distributed AI compute framework for scaling Python tasks, datasets, training, tuning, reinforcement learning, and model serving.",
+  "advanced.resource.ray.fit": "Scaling local workloads to a workstation or cluster when experiments need more CPU, GPU, or concurrency.",
+  "advanced.resource.arena.summary":
+    "Public model comparison platform, formerly LMArena and Chatbot Arena, using community pairwise preference signals and leaderboards.",
+  "advanced.resource.arena.fit": "Checking how frontier and open models compare in real prompts before choosing what to run or test locally.",
+  "advanced.resource.matplotlib.summary":
+    "Core Python plotting library for publication-quality static, animated, and interactive figures across notebooks and scripts.",
+  "advanced.resource.matplotlib.fit": "Custom charts, metric plots, experiment reports, and precise control over figure layout and styling.",
+  "advanced.resource.seaborn.summary":
+    "High-level statistical visualization library built on Matplotlib and designed to work naturally with pandas DataFrames.",
+  "advanced.resource.seaborn.fit": "Fast exploratory plots for distributions, relationships, categories, regression patterns, and model diagnostics.",
+  "advanced.resource.awesomeGenerativeAi.summary":
+    "Large curated GitHub list of generative AI projects, services, models, learning resources, and related discovery lists.",
+  "advanced.resource.awesomeGenerativeAi.fit": "Broad discovery when looking for new models, tools, references, and inspiration outside a fixed stack.",
+  "advanced.resource.llmVisualization.summary":
+    "Interactive 3D visualization of a GPT-style transformer running inference, useful for understanding attention, layers, and token flow.",
+  "advanced.resource.llmVisualization.fit": "Learning transformer internals visually before implementing, fine-tuning, or explaining LLM systems.",
   "project.openWebui.summary":
     "Extensible self-hosted AI platform with Ollama and OpenAI-compatible support, built-in RAG, and an offline-friendly web interface.",
   "project.openWebui.needs":
     "A polished browser interface for local chat, model switching, documents, and small team deployments.",
   "project.openWebui.licenseNote":
     "Recent versions keep permissive-style use but add branding preservation requirements; older v0.6.5 code remains BSD-3-Clause.",
+  "project.googleAiEdgeGallery.summary":
+    "Open-source Google AI Edge mobile app for running Gemma 4 and other LiteRT-optimized models directly on Android and iPhone hardware.",
+  "project.googleAiEdgeGallery.needs":
+    "Testing private local Gemma chat, prompt experiments, image questions, audio transcription, and on-device benchmarks without a home server.",
+  "project.googleAiEdgeGallery.licenseNote":
+    "The app source is Apache-2.0; downloaded Gemma and third-party models remain under their own terms and use restrictions.",
   "project.ollama.summary":
     "Run powerful local LLMs such as Llama, Mistral, Gemma, Qwen, and DeepSeek from a simple local runtime and API.",
   "project.ollama.needs": "The simplest starting point for running and serving LLMs on a laptop, workstation, or small server.",

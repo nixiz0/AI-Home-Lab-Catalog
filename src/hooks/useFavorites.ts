@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { readStoredFavorites, writeStoredFavorites } from "../utils/storage";
 
-export function useFavorites(validIds: string[]) {
+export function useFavorites(validIds: string[], storageKey?: string) {
   const validIdSet = useMemo(() => new Set(validIds), [validIds]);
-  const [favoriteIds, setFavoriteIds] = useState<Set<string>>(() => readStoredFavorites(validIdSet));
+  const [favoriteIds, setFavoriteIds] = useState<Set<string>>(() => readStoredFavorites(validIdSet, storageKey));
 
   const toggleFavorite = (projectId: string) => {
     if (!validIdSet.has(projectId)) {
@@ -19,7 +19,7 @@ export function useFavorites(validIds: string[]) {
         next.add(projectId);
       }
 
-      writeStoredFavorites(next, validIds);
+      writeStoredFavorites(next, validIds, storageKey);
       return next;
     });
   };
