@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/favicon.svg" width="88" height="88" alt="AI Home Lab logo" />
+  <img src="public/logo.svg" width="92" height="92" alt="AI Home Lab logo" />
 </p>
 
 <h1 align="center">AI Home Lab</h1>

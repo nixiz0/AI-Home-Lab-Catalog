@@ -62,8 +62,10 @@ export function App() {
             href="/"
             aria-label="AI Home Lab"
           >
-            <span
-              className="brand-crest brand-crest-sm transition duration-300 group-hover:scale-105 group-hover:shadow-[0_0_42px_rgba(244,211,107,0.26)]"
+            <img
+              className="brand-logo brand-logo-sm transition duration-300 group-hover:scale-105 group-hover:shadow-[0_0_42px_rgba(244,211,107,0.28)]"
+              src="/logo.svg"
+              alt=""
               aria-hidden="true"
             />
             <span className="truncate">AI Home Lab</span>
@@ -118,7 +120,11 @@ export function App() {
             aria-hidden="true"
           >
             <div className="arctic-channel-band absolute left-4 right-4 top-4 z-10 h-28 overflow-hidden rounded-lg border border-white/10 sm:h-32">
-              <span className="brand-crest brand-crest-lg absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2" />
+              <img
+                className="brand-logo brand-logo-lg absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2"
+                src="/logo.svg"
+                alt=""
+              />
             </div>
 
             <div className="absolute left-5 right-5 top-[9.25rem] z-10 flex items-center justify-between rounded-lg border border-ice-blue/15 bg-black/40 px-4 py-3 text-xs font-black uppercase text-text-secondary backdrop-blur sm:top-40">
