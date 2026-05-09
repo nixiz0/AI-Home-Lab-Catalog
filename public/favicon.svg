@@ -5,11 +5,6 @@
       <stop offset="0.46" stop-color="#d8a937" />
       <stop offset="1" stop-color="#8a641f" />
     </linearGradient>
-    <linearGradient id="ice" x1="54" y1="40" x2="196" y2="206" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f8fbff" />
-      <stop offset="0.36" stop-color="#c6d8f5" />
-      <stop offset="1" stop-color="#7f91b8" />
-    </linearGradient>
     <linearGradient id="night" x1="64" y1="58" x2="190" y2="214" gradientUnits="userSpaceOnUse">
       <stop stop-color="#24304a" />
       <stop offset="0.5" stop-color="#17191f" />
@@ -26,15 +21,11 @@
   <path d="M128 16 220 70v116l-92 54-92-54V70z" fill="url(#frame)" />
   <path d="M128 28 208 76v103l-80 47-80-47V76z" fill="#080808" />
   <path d="M128 34 201 79v96l-73 43-73-43V79z" fill="url(#night)" stroke="#24304a" stroke-width="2" />
-  <path d="M58 92 84 58l18 31 26-44 24 45 18-26 28 38v39H58z" fill="url(#ice)" opacity="0.42" />
   <path d="M78 129 128 82l50 47" fill="none" stroke="url(#frame)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M91 128v46h74v-46" fill="#0f0f0f" stroke="#c6d8f5" stroke-width="6" stroke-linejoin="round" />
   <path d="M109 174v-33h38v33" fill="#151923" stroke="#7f91b8" stroke-width="4" stroke-linejoin="round" />
   <circle cx="128" cy="130" r="50" fill="url(#coreGlow)" />
   <path d="M128 103 154 148h-52z" fill="#070707" stroke="url(#frame)" stroke-width="7" stroke-linejoin="round" />
   <path d="M128 119 141 142h-26z" fill="#c6d8f5" opacity="0.9" />
-  <path d="M128 74v-22M105 86 91 69M151 86l14-17" stroke="#c6d8f5" stroke-width="5" stroke-linecap="round" opacity="0.9" />
-  <circle cx="128" cy="48" r="7" fill="#f4d36b" />
-  <circle cx="88" cy="65" r="6" fill="#c6d8f5" />
-  <circle cx="168" cy="65" r="6" fill="#c6d8f5" />
+  <path d="M94 123 128 91l34 32" fill="none" stroke="#c6d8f5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5" />
 </svg>
