@@ -57,6 +57,16 @@ export function App() {
     setShowFavoritesOnly(false);
   };
 
+  const handleCategoryChange = (category: CategoryId) => {
+    setActiveCategory(category);
+    setShowFavoritesOnly(false);
+  };
+
+  const handleFavoritesToggle = () => {
+    setActiveCategory("all");
+    setShowFavoritesOnly((value) => !value);
+  };
+
   return (
     <div className="site-shell min-h-screen overflow-x-hidden bg-background text-text-primary">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-background/75 backdrop-blur-2xl">
@@ -221,8 +231,8 @@ export function App() {
             categoryCounts={categoryCounts}
             favoriteCount={favoriteCount}
             showFavoritesOnly={showFavoritesOnly}
-            onCategoryChange={setActiveCategory}
-            onFavoritesToggle={() => setShowFavoritesOnly((value) => !value)}
+            onCategoryChange={handleCategoryChange}
+            onFavoritesToggle={handleFavoritesToggle}
           />
 
           <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
