@@ -85,12 +85,6 @@ export const en = {
   "advanced.flow.opsEval.body": "Record runs, tune parameters, scale workloads, and compare model behavior.",
   "advanced.flow.visualization.title": "Visualize results",
   "advanced.flow.visualization.body": "Turn metrics, distributions, errors, and model outputs into readable figures.",
-  "advanced.flow.deep.title": "Build deep models",
-  "advanced.flow.deep.body": "Move to GPU frameworks, transformers, fine-tuning, and accelerated research loops.",
-  "advanced.flow.ops.title": "Make it reproducible",
-  "advanced.flow.ops.body": "Track runs, version data, manage artifacts, and scale workloads beyond one process.",
-  "advanced.flow.evaluate.title": "Compare and learn",
-  "advanced.flow.evaluate.body": "Use leaderboards, curated lists, and visual explainers to choose models with context.",
   "advanced.directory.eyebrow": "Advanced directory",
   "advanced.directory.title": "Tools for technical AI labs",
   "advanced.directory.helper": "Filter by stack layer, search by task, and jump to official docs, repositories, and references.",
@@ -106,12 +100,7 @@ export const en = {
   "advanced.category.modeling": "Modeling",
   "advanced.category.opsEval": "Ops & eval",
   "advanced.category.visualization": "Visualization",
-  "advanced.category.ml": "Classical ML",
-  "advanced.category.deepLearning": "Deep learning",
   "advanced.category.llm": "LLMs",
-  "advanced.category.mlops": "MLOps",
-  "advanced.category.evaluation": "Evaluation",
-  "advanced.category.learning": "Learning",
   "advanced.resource.numpy.summary":
     "Foundation of numerical Python with fast arrays, linear algebra, broadcasting, and the tensor-like data structures used across the ecosystem.",
   "advanced.resource.numpy.fit": "Core math, array manipulation, vectorized preprocessing, and glue code behind most Python ML stacks.",
@@ -160,9 +149,6 @@ export const en = {
   "advanced.resource.mlflow.summary":
     "Open-source AI engineering platform for tracking experiments, managing models, evaluating LLM apps, prompts, traces, and production workflows.",
   "advanced.resource.mlflow.fit": "Run tracking, model registry, local experiment history, LLM evaluation, and reproducible AI app development.",
-  "advanced.resource.dvc.summary":
-    "Data and model versioning tool that works with Git while storing large artifacts locally, on NAS, or in remote object storage.",
-  "advanced.resource.dvc.fit": "Reproducible datasets, model artifacts, pipeline stages, and collaboration without committing large files to Git.",
   "advanced.resource.ray.summary":
     "Distributed AI compute framework for scaling Python tasks, datasets, training, tuning, reinforcement learning, and model serving.",
   "advanced.resource.ray.fit": "Scaling local workloads to a workstation or cluster when experiments need more CPU, GPU, or concurrency.",

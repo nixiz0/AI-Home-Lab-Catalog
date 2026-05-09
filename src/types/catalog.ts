@@ -1,3 +1,5 @@
+import type { DictionaryKey } from "../i18n/types";
+
 export type CategoryId =
   | "all"
   | "apps"
@@ -14,11 +16,11 @@ export type OpennessStatus = "open-source" | "source-available" | "proprietary-f
 export type Category = {
   id: CategoryId;
   icon: "all" | "apps" | "mobile" | "models" | "servers" | "images" | "workflows";
-  labelKey: string;
+  labelKey: DictionaryKey;
 };
 
 export type ProjectLink = {
-  labelKey: string;
+  labelKey: DictionaryKey;
   url: string;
 };
 
@@ -26,15 +28,14 @@ export type Project = {
   id: string;
   name: string;
   categoryIds: Exclude<CategoryId, "all">[];
-  summaryKey: string;
-  needsKey: string;
-  licenseNoteKey: string;
+  summaryKey: DictionaryKey;
+  needsKey: DictionaryKey;
+  licenseNoteKey: DictionaryKey;
   websiteUrl: string;
-  websiteLabelKey?: string;
+  websiteLabelKey?: DictionaryKey;
   repoUrl?: string;
   docsUrl?: string;
   extraLinks?: ProjectLink[];
-  logoUrl?: string;
   license: string;
   openness: OpennessStatus;
   commercialStatus: CommercialStatus;

@@ -32,13 +32,15 @@ import type { CategoryId } from "../types/catalog";
 
 type PageView = "catalog" | "advanced";
 
+const projectIds = projects.map((project) => project.id);
+
 export function App() {
   const { t } = useI18n();
   const [activePage, setActivePage] = useState<PageView>(() => (window.location.hash === "#advanced-lab" ? "advanced" : "catalog"));
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<CategoryId>("all");
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
-  const { favoriteIds, toggleFavorite } = useFavorites(projects.map((project) => project.id));
+  const { favoriteIds, toggleFavorite } = useFavorites(projectIds);
 
   const categoryCounts = useMemo(() => getCategoryCounts(projects), []);
   const filteredProjects = useMemo(

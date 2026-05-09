@@ -1,3 +1,4 @@
+import type { DictionaryKey } from "../i18n/types";
 import type { CategoryId, Project } from "../types/catalog";
 
 type FilterProjectsInput = {
@@ -6,7 +7,7 @@ type FilterProjectsInput = {
   activeCategory: CategoryId;
   showFavoritesOnly: boolean;
   favoriteIds: Set<string>;
-  translate: (key: string) => string;
+  translate: (key: DictionaryKey) => string;
 };
 
 export function filterProjects({

@@ -1,3 +1,5 @@
+import type { DictionaryKey } from "../i18n/types";
+
 export type AdvancedResourceCategoryId =
   | "all"
   | "notebooks"
@@ -9,15 +11,15 @@ export type AdvancedResourceCategoryId =
 
 export type AdvancedResourceCategory = {
   id: AdvancedResourceCategoryId;
-  labelKey: string;
+  labelKey: DictionaryKey;
 };
 
 export type AdvancedResource = {
   id: string;
   name: string;
   categoryIds: Exclude<AdvancedResourceCategoryId, "all">[];
-  summaryKey: string;
-  fitKey: string;
+  summaryKey: DictionaryKey;
+  fitKey: DictionaryKey;
   license: string;
   homepageUrl: string;
   repoUrl?: string;

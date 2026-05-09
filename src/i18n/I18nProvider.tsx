@@ -9,7 +9,7 @@ const dictionaries: Record<Locale, Dictionary> = { en, fr };
 type I18nContextValue = {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  t: (key: string) => string;
+  t: (key: DictionaryKey) => string;
 };
 
 const I18nContext = createContext<I18nContextValue | null>(null);
@@ -31,10 +31,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       writeStoredLocale(nextLocale);
     };
 
-    const t = (key: string) => {
-      const dictionaryKey = key as DictionaryKey;
-
-      return dictionaries[locale][dictionaryKey] ?? dictionaries[defaultLocale][dictionaryKey] ?? key;
+    const t = (key: DictionaryKey) => {
+      return dictionaries[locale][key] ?? dictionaries[defaultLocale][key] ?? key;
     };
 
     return { locale, setLocale, t };

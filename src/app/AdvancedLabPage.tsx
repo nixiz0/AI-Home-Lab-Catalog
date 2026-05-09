@@ -10,6 +10,7 @@ import {
   Gauge,
   Heart,
   Image as ImageIcon,
+  type LucideIcon,
   RotateCcw,
   Search,
   SlidersHorizontal,
@@ -18,10 +19,20 @@ import { AdvancedResourceCard } from "../components/AdvancedResourceCard";
 import { advancedResourceCategories, advancedResources } from "../data/advancedResources";
 import { useFavorites } from "../hooks/useFavorites";
 import { useI18n } from "../i18n/I18nProvider";
+import type { DictionaryKey } from "../i18n/types";
 import type { AdvancedResourceCategoryId } from "../types/advanced";
 import { filterAdvancedResources, getAdvancedCategoryCounts } from "../utils/advancedResources";
 import { cn } from "../utils/classNames";
 import { advancedFavoritesStorageKey } from "../utils/storage";
+
+const advancedResourceIds = advancedResources.map((resource) => resource.id);
+
+type LabFlowStep = {
+  icon: LucideIcon;
+  titleKey: DictionaryKey;
+  bodyKey: DictionaryKey;
+  tools: string[];
+};
 
 const categoryIcons = {
   all: Boxes,
@@ -33,7 +44,7 @@ const categoryIcons = {
   visualization: ImageIcon,
 };
 
-const labFlow = [
+const labFlow: LabFlowStep[] = [
   {
     icon: BookOpen,
     titleKey: "advanced.flow.notebooks.title",
@@ -77,10 +88,7 @@ export function AdvancedLabPage() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<AdvancedResourceCategoryId>("all");
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
-  const { favoriteIds, toggleFavorite } = useFavorites(
-    advancedResources.map((resource) => resource.id),
-    advancedFavoritesStorageKey,
-  );
+  const { favoriteIds, toggleFavorite } = useFavorites(advancedResourceIds, advancedFavoritesStorageKey);
 
   const categoryCounts = useMemo(() => getAdvancedCategoryCounts(advancedResources), []);
   const filteredResources = useMemo(

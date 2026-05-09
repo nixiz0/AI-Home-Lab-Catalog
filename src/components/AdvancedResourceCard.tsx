@@ -1,11 +1,21 @@
 import { BookOpen, ExternalLink, Github, Heart } from "lucide-react";
 import { useI18n } from "../i18n/I18nProvider";
-import type { AdvancedResource } from "../types/advanced";
+import type { DictionaryKey } from "../i18n/types";
+import type { AdvancedResource, AdvancedResourceCategoryId } from "../types/advanced";
 
 type AdvancedResourceCardProps = {
   resource: AdvancedResource;
   isFavorite: boolean;
   onToggleFavorite: () => void;
+};
+
+const categoryLabelKeys: Record<Exclude<AdvancedResourceCategoryId, "all">, DictionaryKey> = {
+  notebooks: "advanced.category.notebooks",
+  data: "advanced.category.data",
+  modeling: "advanced.category.modeling",
+  llm: "advanced.category.llm",
+  "ops-eval": "advanced.category.opsEval",
+  visualization: "advanced.category.visualization",
 };
 
 export function AdvancedResourceCard({ resource, isFavorite, onToggleFavorite }: AdvancedResourceCardProps) {
@@ -40,7 +50,7 @@ export function AdvancedResourceCard({ resource, isFavorite, onToggleFavorite }:
             className="rounded-md border border-ice-blue/15 bg-ice-blue/10 px-2 py-1 text-[0.72rem] font-black uppercase text-ice-blue"
             key={categoryId}
           >
-            {t(`advanced.category.${categoryIdToKey(categoryId)}`)}
+            {t(categoryLabelKeys[categoryId])}
           </span>
         ))}
       </div>
@@ -101,12 +111,4 @@ export function AdvancedResourceCard({ resource, isFavorite, onToggleFavorite }:
       </div>
     </article>
   );
-}
-
-function categoryIdToKey(categoryId: string) {
-  const keys: Record<string, string> = {
-    "ops-eval": "opsEval",
-  };
-
-  return keys[categoryId] ?? categoryId;
 }

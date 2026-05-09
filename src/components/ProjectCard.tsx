@@ -1,6 +1,7 @@
 import { BookOpen, ExternalLink, Github, Heart } from "lucide-react";
 import { useI18n } from "../i18n/I18nProvider";
-import type { OpennessStatus, Project } from "../types/catalog";
+import type { DictionaryKey } from "../i18n/types";
+import type { CategoryId, OpennessStatus, Project } from "../types/catalog";
 import { cn } from "../utils/classNames";
 
 type ProjectCardProps = {
@@ -9,11 +10,22 @@ type ProjectCardProps = {
   onToggleFavorite: () => void;
 };
 
+const categoryLabelKeys: Record<Exclude<CategoryId, "all">, DictionaryKey> = {
+  apps: "category.apps",
+  mobile: "category.mobile",
+  models: "category.models",
+  servers: "category.servers",
+  images: "category.images",
+  workflows: "category.workflows",
+};
+
 export function ProjectCard({ project, isFavorite, onToggleFavorite }: ProjectCardProps) {
   const { t } = useI18n();
   const visitLabel = project.websiteLabelKey ? t(project.websiteLabelKey) : t("card.links.visit");
-  const featuredLinks = project.extraLinks
-    ? [{ label: visitLabel, url: project.websiteUrl }, ...project.extraLinks.map((link) => ({ label: t(link.labelKey), url: link.url }))]
+  const extraLinks = project.extraLinks ?? [];
+  const hasFeaturedLinks = extraLinks.length > 0;
+  const featuredLinks = hasFeaturedLinks
+    ? [{ label: visitLabel, url: project.websiteUrl }, ...extraLinks.map((link) => ({ label: t(link.labelKey), url: link.url }))]
     : [];
 
   return (
@@ -50,7 +62,7 @@ export function ProjectCard({ project, isFavorite, onToggleFavorite }: ProjectCa
             className="rounded-md border border-ice-blue/15 bg-ice-blue/10 px-2 py-1 text-[0.72rem] font-black uppercase text-ice-blue"
             key={categoryId}
           >
-            {t(`category.${categoryKey(categoryId)}`)}
+            {t(categoryLabelKeys[categoryId])}
           </span>
         ))}
       </div>
@@ -111,7 +123,7 @@ export function ProjectCard({ project, isFavorite, onToggleFavorite }: ProjectCa
 
       <div className="mt-auto flex flex-col gap-3 pt-5 text-xs font-bold text-text-secondary sm:flex-row sm:items-center sm:justify-between">
         <div className="flex flex-wrap gap-2 sm:justify-end">
-          {featuredLinks.length === 0 ? (
+          {!hasFeaturedLinks ? (
             <a
               className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/10 px-2.5 text-text-primary transition hover:border-ice-blue/35 hover:text-ice-blue"
               href={project.websiteUrl}
@@ -162,8 +174,4 @@ function opennessClass(openness: OpennessStatus) {
   };
 
   return classes[openness];
-}
-
-function categoryKey(categoryId: string) {
-  return categoryId;
 }

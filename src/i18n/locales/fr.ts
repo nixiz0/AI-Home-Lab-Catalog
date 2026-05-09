@@ -87,12 +87,6 @@ export const fr = {
   "advanced.flow.opsEval.body": "Enregistrer les runs, tuner les parametres, scaler les workloads et comparer le comportement des modeles.",
   "advanced.flow.visualization.title": "Visualiser les resultats",
   "advanced.flow.visualization.body": "Transformer metriques, distributions, erreurs et sorties de modeles en figures lisibles.",
-  "advanced.flow.deep.title": "Construire le deep",
-  "advanced.flow.deep.body": "Passer aux frameworks GPU, transformers, fine-tuning et boucles de recherche accelerees.",
-  "advanced.flow.ops.title": "Rendre reproductible",
-  "advanced.flow.ops.body": "Tracer les runs, versionner les donnees, gerer les artefacts et scaler au-dela d'un seul process.",
-  "advanced.flow.evaluate.title": "Comparer et apprendre",
-  "advanced.flow.evaluate.body": "Utiliser leaderboards, listes curatees et visualisations pour choisir les modeles avec contexte.",
   "advanced.directory.eyebrow": "Repertoire avance",
   "advanced.directory.title": "Outils pour labs IA techniques",
   "advanced.directory.helper": "Filtrez par couche de stack, cherchez par tache et ouvrez les docs, repos et references officiels.",
@@ -108,12 +102,7 @@ export const fr = {
   "advanced.category.modeling": "Modelisation",
   "advanced.category.opsEval": "Ops & eval",
   "advanced.category.visualization": "Visualisation",
-  "advanced.category.ml": "ML classique",
-  "advanced.category.deepLearning": "Deep learning",
   "advanced.category.llm": "LLM",
-  "advanced.category.mlops": "MLOps",
-  "advanced.category.evaluation": "Evaluation",
-  "advanced.category.learning": "Apprendre",
   "advanced.resource.numpy.summary":
     "Base du Python numerique avec tableaux rapides, algebre lineaire, broadcasting et structures proches des tenseurs utilisees par l'ecosysteme.",
   "advanced.resource.numpy.fit": "Maths de base, manipulation de tableaux, preprocessing vectorise et glue code derriere la plupart des stacks ML Python.",
@@ -162,9 +151,6 @@ export const fr = {
   "advanced.resource.mlflow.summary":
     "Plateforme open source d'AI engineering pour tracer experiences, gerer modeles, evaluer apps LLM, prompts, traces et workflows production.",
   "advanced.resource.mlflow.fit": "Tracking de runs, registry de modeles, historique local d'experiences, evaluation LLM et developpement IA reproductible.",
-  "advanced.resource.dvc.summary":
-    "Outil de versioning de donnees et modeles qui fonctionne avec Git tout en stockant les gros artefacts en local, NAS ou object storage.",
-  "advanced.resource.dvc.fit": "Datasets reproductibles, artefacts de modeles, etapes de pipeline et collaboration sans gros fichiers dans Git.",
   "advanced.resource.ray.summary":
     "Framework de calcul IA distribue pour scaler taches Python, datasets, entrainement, tuning, reinforcement learning et serving.",
   "advanced.resource.ray.fit": "Scaler les workloads locaux vers workstation ou cluster quand les experiences demandent plus de CPU, GPU ou concurrence.",

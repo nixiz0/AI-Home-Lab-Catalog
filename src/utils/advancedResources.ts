@@ -1,3 +1,4 @@
+import type { DictionaryKey } from "../i18n/types";
 import type { AdvancedResource, AdvancedResourceCategoryId } from "../types/advanced";
 
 type FilterAdvancedResourcesInput = {
@@ -6,7 +7,7 @@ type FilterAdvancedResourcesInput = {
   activeCategory: AdvancedResourceCategoryId;
   showFavoritesOnly: boolean;
   favoriteIds: Set<string>;
-  translate: (key: string) => string;
+  translate: (key: DictionaryKey) => string;
 };
 
 export function filterAdvancedResources({

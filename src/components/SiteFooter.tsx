@@ -1,8 +1,9 @@
 import { Instagram, Linkedin, Youtube, type LucideIcon } from "lucide-react";
 import { useI18n } from "../i18n/I18nProvider";
+import type { DictionaryKey } from "../i18n/types";
 
 type SocialLink = {
-  labelKey: string;
+  labelKey: DictionaryKey;
   href: string;
   icon: LucideIcon;
 };
