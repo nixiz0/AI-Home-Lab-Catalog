@@ -93,7 +93,7 @@ export function App() {
             </p>
             <h1
               id="hero-title"
-              className="max-w-4xl text-balance text-[clamp(3.5rem,13vw,8.75rem)] font-black leading-[0.86] tracking-normal text-text-primary"
+              className="max-w-4xl text-balance text-[clamp(3rem,9vw,6.9rem)] font-black leading-[0.9] tracking-normal text-text-primary"
             >
               AI Home Lab Catalog
             </h1>
