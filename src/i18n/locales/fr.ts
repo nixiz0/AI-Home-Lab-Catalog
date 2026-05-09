@@ -1,0 +1,130 @@
+import type { Dictionary } from "../types";
+
+export const fr = {
+  "header.source": "Source",
+  "hero.eyebrow": "Guilde IA locale privee",
+  "hero.subtitle":
+    "Explorez une carte fiable et curatee d'outils IA open source ou auto-heberges pour un home lab prive : chat, serveurs d'inference, voix, images, automatisations, RAG et frameworks d'agents.",
+  "hero.primaryAction": "Explorer le catalogue",
+  "hero.secondaryAction": "Chercher un outil",
+  "hero.visual.status": "Lab en ligne",
+  "hero.visual.private": "Prive",
+  "hero.visual.open": "Stack open",
+  "hero.visual.selfhost": "Auto-heberge",
+  "search.placeholder": "Rechercher projets, tags, licences ou besoins...",
+  "search.label": "Rechercher dans le catalogue IA local",
+  "stats.label": "Statistiques du catalogue",
+  "stats.projects": "Projets",
+  "stats.favorites": "Favoris",
+  "stats.languages": "Langues",
+  "stats.licenseAware": "Licences visibles",
+  "stats.yes": "Oui",
+  "catalog.eyebrow": "Repertoire",
+  "catalog.title": "Projets IA locaux",
+  "catalog.results": "resultats",
+  "catalog.helper": "Filtrez par categorie, cherchez par besoin et gardez vos favoris localement dans ce navigateur.",
+  "filters.favorites": "Favoris",
+  "filters.reset": "Reinitialiser",
+  "empty.title": "Aucun projet correspondant",
+  "empty.description": "Essayez un autre mot-cle ou reinitialisez la categorie et le filtre favoris.",
+  "empty.action": "Afficher tous les projets",
+  "card.bestFor": "Ideal pour",
+  "card.license": "Licence",
+  "card.commercial": "Commercial",
+  "card.links.visit": "Visiter",
+  "card.links.repo": "Repo",
+  "card.links.docs": "Docs",
+  "card.sources": "Sources de verification",
+  "card.source": "Source",
+  "card.favorite.add": "Ajouter aux favoris",
+  "card.favorite.remove": "Retirer des favoris",
+  "card.verified": "Verifie",
+  "category.all": "Tout",
+  "category.interface": "Interface",
+  "category.localServer": "Serveur IA",
+  "category.imageGeneration": "Generation d'images",
+  "category.voice": "Voix",
+  "category.agents": "Agents",
+  "category.automation": "Automatisation",
+  "category.models": "Modeles",
+  "category.rag": "RAG",
+  "difficulty.beginner": "Debutant",
+  "difficulty.intermediate": "Intermediaire",
+  "difficulty.advanced": "Avance",
+  "openness.open-source": "Open source",
+  "openness.source-available": "Code disponible",
+  "openness.proprietary-free": "Proprietaire gratuit",
+  "openness.model-license": "Licence modele",
+  "commercial.friendly": "Usage commercial OK",
+  "commercial.caution": "Obligations a verifier",
+  "commercial.restricted": "Usage restreint",
+  "commercial.proprietary": "Gratuit au travail",
+  "project.openWebui.summary":
+    "Plateforme IA auto-hebergee extensible avec support Ollama et API compatibles OpenAI, RAG integre et interface web utilisable hors ligne.",
+  "project.openWebui.needs":
+    "Une interface navigateur soignee pour le chat local, le changement de modele, les documents et les petits deploiements d'equipe.",
+  "project.openWebui.licenseNote":
+    "Les versions recentes gardent un usage de style permissif mais ajoutent des obligations de conservation de marque; le code v0.6.5 reste BSD-3-Clause.",
+  "project.ollama.summary":
+    "Executez des LLM locaux comme Llama, Mistral, Gemma, Qwen et DeepSeek via un runtime local et une API simples.",
+  "project.ollama.needs": "Le point de depart le plus simple pour lancer et servir des LLM sur laptop, workstation ou petit serveur.",
+  "project.ollama.licenseNote": "Application sous licence MIT; verifiez toujours la licence de chaque modele telecharge.",
+  "project.vllm.summary":
+    "Moteur d'inference et de serving LLM rapide et efficace en memoire, optimise GPU, batching et API compatible OpenAI.",
+  "project.vllm.needs": "Serving haut debit sur materiel CUDA/ROCm quand la performance et la concurrence comptent.",
+  "project.vllm.licenseNote": "Licence Apache-2.0, generalement favorable aux usages logiciels commerciaux.",
+  "project.lmStudio.summary":
+    "Application desktop pour decouvrir, telecharger, discuter avec et servir des LLM locaux sur Windows, macOS et Linux.",
+  "project.lmStudio.needs": "Un flux desktop accessible avec serveur local et tres peu de configuration.",
+  "project.lmStudio.licenseNote":
+    "Gratuit pour usage personnel et professionnel, mais l'application est proprietaire; les licences des modeles charges restent separees.",
+  "project.anythingLlm.summary":
+    "Application LLM complete avec chat local-first, RAG, indexation de fichiers, agents, multi-modeles, desktop ou Docker.",
+  "project.anythingLlm.needs": "Un espace prive complet pour documents, chat d'equipe, outils agents et fournisseurs personnalises.",
+  "project.anythingLlm.licenseNote": "Projet sous licence MIT avec conditions favorables aux usages commerciaux.",
+  "project.jan.summary":
+    "Alternative open source et privee a ChatGPT qui fonctionne hors ligne et peut exposer une API locale compatible OpenAI.",
+  "project.jan.needs": "Un assistant desktop propre pour modeles locaux, chat prive et usage quotidien simple.",
+  "project.jan.licenseNote": "Licence Apache-2.0, generalement favorable aux usages commerciaux.",
+  "project.verba.summary":
+    "Chatbot RAG communautaire base sur Weaviate pour interroger des documents localement ou avec des fournisseurs externes choisis.",
+  "project.verba.needs": "Une interface RAG specialisee si Weaviate fait deja partie du home lab.",
+  "project.verba.licenseNote": "Licence BSD-3-Clause; fournisseurs et modeles peuvent ajouter des conditions separees.",
+  "project.whisper.summary": "Modele OpenAI de transcription et traduction speech-to-text multilingue.",
+  "project.whisper.needs": "Transcription locale, sous-titres, notes de reunion et experiences de reconnaissance vocale.",
+  "project.whisper.licenseNote": "Le code et les poids de Whisper sont publies sous licence MIT.",
+  "project.coqui.summary": "Toolkit text-to-speech de qualite avec modeles multilingues et workflows de clonage vocal.",
+  "project.coqui.needs": "Experiences TTS locales, recherche en synthese vocale et prototypes non commerciaux de clonage vocal.",
+  "project.coqui.licenseNote":
+    "Le code du toolkit est MPL-2.0, mais XTTS-v2 et ses sorties de clonage vocal sont sous CPML non commerciale.",
+  "project.fooocus.summary": "Application SDXL simple d'utilisation, orientee qualite d'image avec peu de reglage de prompt.",
+  "project.fooocus.needs": "Un generateur d'images hors ligne simple pour obtenir vite des resultats sans workflow par noeuds.",
+  "project.fooocus.licenseNote":
+    "Application GPL-3.0; les sorties de modeles et les modeles inclus ou telecharges doivent etre verifies separement.",
+  "project.stableDiffusion.summary": "Famille de modeles de diffusion texte-vers-image pour generer des images localement.",
+  "project.stableDiffusion.needs": "La couche modele de base derriere de nombreuses interfaces et workflows d'images locaux.",
+  "project.stableDiffusion.licenseNote":
+    "CreativeML Open RAIL-M permet de nombreux usages mais inclut des restrictions d'usage responsable.",
+  "project.comfyui.summary":
+    "Interface par noeuds, API et backend puissants pour construire des workflows avances de diffusion et d'IA generative.",
+  "project.comfyui.needs": "Controle fin des pipelines d'image, workflows reutilisables, noeuds custom et automatisation via API locale.",
+  "project.comfyui.licenseNote":
+    "Application GPL-3.0; checkpoints de modeles et noeuds custom peuvent avoir leurs propres conditions.",
+  "project.n8n.summary":
+    "Plateforme d'automatisation pour connecter API, donnees et outils IA dans des agents logiques avec peu de code.",
+  "project.n8n.needs": "Automatisation no-code/low-code, workflows IA, integrations et processus locaux planifies.",
+  "project.n8n.licenseNote":
+    "Licence fair-code source-available autorisant beaucoup d'usages internes mais restreignant la vente de produits derives ou d'acces heberge.",
+  "project.crewai.summary":
+    "Framework Python multi-agent pour coordonner des agents IA avec roles, taches, outils, memoire et logique collaborative.",
+  "project.crewai.needs": "Equipes d'agents codees par developpeur, avec roles, taches et orchestration explicites.",
+  "project.crewai.licenseNote": "Framework sous licence MIT avec conditions favorables aux usages commerciaux.",
+  "project.langchain.summary":
+    "Toolkit pour apps et agents LLM avec integrations de modeles, outils, chaines, memoire et composants RAG.",
+  "project.langchain.needs": "Framework developpeur generaliste pour connecter des modeles aux donnees et appels d'outils.",
+  "project.langchain.licenseNote": "Bibliotheque MIT; LangSmith et les services heberges sont des produits separes.",
+  "project.langgraph.summary":
+    "Framework d'orchestration bas niveau pour agents durables, stateful et longs, representes comme des graphes.",
+  "project.langgraph.needs": "Workflows agents de type production avec etat, reprises, branches et validation humaine.",
+  "project.langgraph.licenseNote": "Bibliotheque MIT; les services commerciaux LangChain sont separes.",
+} satisfies Dictionary;
