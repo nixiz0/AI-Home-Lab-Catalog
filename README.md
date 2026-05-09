@@ -1,58 +1,83 @@
-# AI Home Lab
+<p align="center">
+  <img src="public/favicon.svg" width="88" height="88" alt="AI Home Lab logo" />
+</p>
 
-Responsive Vite + React + Tailwind frontend for a curated local AI project catalog.
+<h1 align="center">AI Home Lab</h1>
 
-The site presents open-source, source-available, and self-hostable AI tools people can run locally at home. The visual identity is dark, arctic, premium, and consistent with the Hey Initium channel palette: black surfaces, icy blue accents, and controlled gold highlights.
+<p align="center">
+  A premium, responsive catalog of open-source and self-hosted AI tools for building a private local AI home lab.
+</p>
 
-## Commands
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-19-0f0f0f?style=for-the-badge&labelColor=17191f&color=c6d8f5" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-0f0f0f?style=for-the-badge&labelColor=17191f&color=7f91b8" />
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-4-0f0f0f?style=for-the-badge&labelColor=17191f&color=d8a937" />
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-7-0f0f0f?style=for-the-badge&labelColor=17191f&color=f4d36b" />
+</p>
+
+## ✨ Overview
+
+AI Home Lab helps people discover practical AI tools they can run locally or self-host at home. It is designed for both technical and non-technical users, with clear categories, search, favorites, license visibility, and verification sources.
+
+The interface follows a dark arctic visual identity inspired by the Hey Initium channel design: black surfaces, icy blue accents, controlled gold highlights, and a clean futuristic layout.
+
+## ⚡ Highlights
+
+- Curated catalog of local AI interfaces, inference servers, RAG tools, voice models, image generators, automations, and agent frameworks.
+- Responsive Tailwind UI built for desktop, tablet, and mobile.
+- English and French interface with typed translation parity.
+- Browser-persisted favorites and language preference.
+- License, commercial-use status, and verification source disclosure on each project card.
+- Custom SVG favicon and premium dark visual system.
+
+## 🛠️ Tech Stack
+
+- Vite
+- React
+- TypeScript
+- Tailwind CSS v4
+- Lucide React icons
+- Browser `localStorage`
+
+## 🚀 Getting Started
 
 ```bash
-npm.cmd install
-npm.cmd run dev
-npm.cmd run build
-npm.cmd run lint
+npm install
+npm run dev
 ```
 
-## Design System
+The development server runs on `http://127.0.0.1:5173/` by default.
 
-- Tailwind is the default styling layer.
-- Theme tokens live in `src/styles/index.css` and mirror the CSS palette used by the app.
-- Custom CSS is reserved for global browser resets, the arctic background, the gold crest, flag icons, favicon-adjacent brand details, and motion keyframes.
-- Components should stay responsive by default with Tailwind breakpoints and avoid hard-coded desktop-only layouts.
+## ✅ Quality Checks
 
-## Structure
+```bash
+npm run lint
+npm run build
+```
+
+Run both commands before opening a pull request or shipping a change.
+
+## 🗂️ Project Structure
 
 ```text
 src/
-  app/              App composition and page state
-  components/       Reusable UI components
+  app/              Page composition and UI state
+  components/       Reusable interface components
   data/             Catalog projects and category taxonomy
   hooks/            Browser-persisted favorites
-  i18n/
-    locales/        Edit English and French translations here
-  styles/           Tailwind import, theme tokens, and small custom effects
-  types/            Shared catalog types
-  utils/            Filtering and safe localStorage helpers
+  i18n/             Locale dictionaries and language provider
+  styles/           Tailwind import, theme tokens, and custom effects
+  types/            Shared TypeScript types
+  utils/            Filtering, class names, and storage helpers
 ```
 
-Read `ARCHITECTURE.md` for the short technical overview used by developers and AI agents.
+## 🧭 Maintenance
 
-## Maintaining Translations
+- Add or edit catalog entries in `src/data/projects.ts`.
+- Edit localized copy in `src/i18n/locales/en.ts` and `src/i18n/locales/fr.ts`; English defines the required key set and TypeScript validates French parity during `npm run build`.
+- Keep most styling in Tailwind utilities. Use `src/styles/index.css` only for global tokens, custom visual effects, and keyframes.
+- Read `ARCHITECTURE.md` for the short technical onboarding guide.
 
-Edit:
+## 👤 Author
 
-- `src/i18n/locales/en.ts`
-- `src/i18n/locales/fr.ts`
-
-Keep keys identical between both files. Project entries use:
-
-- `project.<projectId>.summary`
-- `project.<projectId>.needs`
-- `project.<projectId>.licenseNote`
-
-Language preference is stored in the browser as `ai-home-lab:language:v1`.
-Favorites are stored as sanitized project IDs in `ai-home-lab:favorites:v1`.
-
-## Catalog Data
-
-Add or modify projects in `src/data/projects.ts`. License and commercial-use tags are intentionally separated because free, open source, source-available, and commercial-friendly are different things.
+- [@nixiz0](https://github.com/nixiz0).
