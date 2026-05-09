@@ -1,8 +1,8 @@
-# AI Home Lab Architecture
+# AI Home Lab Catalog Architecture
 
 ## Purpose
 
-AI Home Lab is a client-side catalog for local and self-hosted AI tools. It helps technical and non-technical users filter projects by category, search by need, and save favorites in the browser.
+AI Home Lab Catalog is a client-side catalog for local and self-hosted AI tools. It helps technical and non-technical users filter projects by category, search by need, and save favorites in the browser.
 
 ## Stack
 
@@ -42,7 +42,7 @@ Keep translation keys identical across locales.
 
 - `App.tsx`: page shell, hero, search, catalog orchestration.
 - `components/CatalogFilters.tsx`: horizontal category and favorites filters.
-- `components/ProjectCard.tsx`: project presentation, external links, and verification source disclosure.
+- `components/ProjectCard.tsx`: project presentation, category badges, essential metadata, favorite control, and external links.
 - `components/LanguageSwitch.tsx`: language selection.
 - `components/StatPill.tsx` and `components/EmptyState.tsx`: small reusable UI.
 

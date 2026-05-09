@@ -1,23 +1,17 @@
 export type CategoryId =
   | "all"
-  | "interface"
-  | "local-server"
-  | "image-generation"
-  | "voice"
-  | "agents"
-  | "automation"
+  | "apps"
   | "models"
-  | "rag";
+  | "images"
+  | "workflows";
 
 export type CommercialStatus = "friendly" | "caution" | "restricted" | "proprietary";
 
 export type OpennessStatus = "open-source" | "source-available" | "proprietary-free" | "model-license";
 
-export type Difficulty = "beginner" | "intermediate" | "advanced";
-
 export type Category = {
   id: CategoryId;
-  icon: "all" | "interface" | "server" | "image" | "voice" | "agents" | "automation" | "models" | "rag";
+  icon: "all" | "apps" | "models" | "images" | "workflows";
   labelKey: string;
 };
 
@@ -35,9 +29,6 @@ export type Project = {
   license: string;
   openness: OpennessStatus;
   commercialStatus: CommercialStatus;
-  difficulty: Difficulty;
   tags: string[];
   searchAliases: string[];
-  verifiedAt: string;
-  sourceRefs: string[];
 };

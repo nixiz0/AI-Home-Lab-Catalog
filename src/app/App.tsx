@@ -3,9 +3,13 @@ import {
   ArrowRight,
   BadgeCheck,
   Boxes,
+  Cpu,
   Heart,
+  Image as ImageIcon,
   Languages,
   LockKeyhole,
+  Mic2,
+  PanelTop,
   RotateCcw,
   Search,
   ShieldCheck,
@@ -60,7 +64,7 @@ export function App() {
           <a
             className="group inline-flex min-w-0 items-center gap-3 text-sm font-black text-text-primary transition hover:text-bright-gold sm:text-base"
             href="/"
-            aria-label="AI Home Lab"
+            aria-label="AI Home Lab Catalog"
           >
             <img
               className="brand-logo brand-logo-sm transition duration-300 group-hover:scale-105 group-hover:shadow-[0_0_42px_rgba(244,211,107,0.28)]"
@@ -68,7 +72,7 @@ export function App() {
               alt=""
               aria-hidden="true"
             />
-            <span className="truncate">AI Home Lab</span>
+            <span className="truncate">AI Home Lab Catalog</span>
           </a>
 
           <div className="flex shrink-0 items-center gap-2">
@@ -91,7 +95,7 @@ export function App() {
               id="hero-title"
               className="max-w-4xl text-balance text-[clamp(3.5rem,13vw,8.75rem)] font-black leading-[0.86] tracking-normal text-text-primary"
             >
-              AI Home Lab
+              AI Home Lab Catalog
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg lg:text-xl lg:leading-9">
               {t("hero.subtitle")}
@@ -116,7 +120,7 @@ export function App() {
           </div>
 
           <div
-            className="lab-visual relative min-h-[340px] overflow-hidden rounded-lg border border-ice-blue/15 bg-surface/70 shadow-[0_24px_80px_rgba(0,0,0,0.46)] backdrop-blur-xl sm:min-h-[410px]"
+            className="lab-visual relative min-h-[430px] overflow-hidden rounded-lg border border-ice-blue/15 bg-surface/70 shadow-[0_24px_80px_rgba(0,0,0,0.46)] backdrop-blur-xl sm:min-h-[460px]"
             aria-hidden="true"
           >
             <div className="arctic-channel-band absolute left-4 right-4 top-4 z-10 h-28 overflow-hidden rounded-lg border border-white/10 sm:h-32">
@@ -127,26 +131,43 @@ export function App() {
               />
             </div>
 
-            <div className="absolute left-5 right-5 top-[9.25rem] z-10 flex items-center justify-between rounded-lg border border-ice-blue/15 bg-black/40 px-4 py-3 text-xs font-black uppercase text-text-secondary backdrop-blur sm:top-40">
-              <span className="inline-flex items-center gap-2 text-ice-blue">
-                <span className="size-2 rounded-full bg-bright-gold shadow-[0_0_18px_rgba(244,211,107,0.8)]" />
-                {t("hero.visual.status")}
+            <div className="lab-node node-openwebui">
+              <span className="lab-node-icon">
+                <PanelTop size={28} aria-hidden="true" />
               </span>
-              <span>LOCAL</span>
             </div>
-
-            <div className="lab-node node-openwebui">UI</div>
-            <div className="lab-node node-ollama">LLM</div>
-            <div className="lab-node node-comfy">IMG</div>
-            <div className="lab-node node-voice">VOX</div>
+            <div className="lab-node node-ollama">
+              <span className="lab-node-icon">
+                <Cpu size={29} aria-hidden="true" />
+              </span>
+            </div>
+            <div className="lab-node node-comfy">
+              <span className="lab-node-icon">
+                <ImageIcon size={28} aria-hidden="true" />
+              </span>
+            </div>
+            <div className="lab-node node-voice">
+              <span className="lab-node-icon">
+                <Mic2 size={28} aria-hidden="true" />
+              </span>
+            </div>
             <span className="lab-line line-one" />
             <span className="lab-line line-two" />
             <span className="lab-line line-three" />
 
-            <div className="absolute bottom-5 left-5 right-5 grid grid-cols-3 gap-2 text-center text-[0.68rem] font-black uppercase text-text-secondary">
-              <span className="rounded-lg border border-white/10 bg-white/[0.04] px-2 py-3">{t("hero.visual.private")}</span>
-              <span className="rounded-lg border border-white/10 bg-white/[0.04] px-2 py-3">{t("hero.visual.open")}</span>
-              <span className="rounded-lg border border-white/10 bg-white/[0.04] px-2 py-3">{t("hero.visual.selfhost")}</span>
+            <div className="absolute bottom-4 left-4 right-4 z-20 rounded-lg border border-ice-blue/15 bg-black/60 p-2.5 shadow-[0_16px_38px_rgba(0,0,0,0.28)] backdrop-blur-md sm:p-3">
+              <div className="flex items-center justify-between gap-3 text-xs font-black uppercase text-text-secondary">
+                <span className="inline-flex items-center gap-2 text-ice-blue">
+                  <span className="size-2 rounded-full bg-bright-gold shadow-[0_0_18px_rgba(244,211,107,0.8)]" />
+                  {t("hero.visual.status")}
+                </span>
+                <span className="rounded-md border border-white/10 px-2 py-1 text-[0.68rem] text-text-secondary">LOCAL</span>
+              </div>
+              <div className="mt-2 grid grid-cols-3 gap-2 text-center text-[0.66rem] font-black uppercase text-text-secondary sm:mt-3">
+                <span className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1.5">{t("hero.visual.private")}</span>
+                <span className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1.5">{t("hero.visual.open")}</span>
+                <span className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-1.5">{t("hero.visual.selfhost")}</span>
+              </div>
             </div>
           </div>
 
@@ -204,20 +225,21 @@ export function App() {
             onFavoritesToggle={() => setShowFavoritesOnly((value) => !value)}
           />
 
-          {hasFilters ? (
-            <button
-              className="mb-3 inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-white/15 bg-transparent px-4 text-sm font-black text-text-secondary transition duration-200 hover:border-bright-gold/35 hover:bg-gold/10 hover:text-bright-gold"
-              type="button"
-              onClick={resetFilters}
-            >
-              <RotateCcw size={16} />
-              {t("filters.reset")}
-            </button>
-          ) : null}
-
-          <div className="mb-5 inline-flex items-center gap-2 text-sm font-bold text-text-secondary" aria-hidden="true">
-            <SlidersHorizontal size={17} className="text-steel-blue" />
-            <span>{t("catalog.helper")}</span>
+          <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+            {hasFilters ? (
+              <button
+                className="inline-flex min-h-10 w-fit items-center justify-center gap-2 rounded-lg border border-white/15 bg-transparent px-4 text-sm font-black text-text-secondary transition duration-200 hover:border-bright-gold/35 hover:bg-gold/10 hover:text-bright-gold"
+                type="button"
+                onClick={resetFilters}
+              >
+                <RotateCcw size={16} />
+                {t("filters.reset")}
+              </button>
+            ) : null}
+            <div className="inline-flex items-center gap-2 text-sm font-bold text-text-secondary" aria-hidden="true">
+              <SlidersHorizontal size={17} className="text-steel-blue" />
+              <span>{t("catalog.helper")}</span>
+            </div>
           </div>
 
           {filteredProjects.length > 0 ? (

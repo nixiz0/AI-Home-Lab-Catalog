@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="public/logo.svg" width="92" height="92" alt="AI Home Lab logo" />
+  <img src="public/logo.svg" width="92" height="92" alt="AI Home Lab Catalog logo" />
 </p>
 
-<h1 align="center">AI Home Lab</h1>
+<h1 align="center">AI Home Lab Catalog</h1>
 
 <p align="center">
   A premium, responsive catalog of open-source and self-hosted AI tools for building a private local AI home lab.
@@ -17,7 +17,7 @@
 
 ## ✨ Overview
 
-AI Home Lab helps people discover practical AI tools they can run locally or self-host at home. It is designed for both technical and non-technical users, with clear categories, search, favorites, license visibility, and verification sources.
+AI Home Lab Catalog helps people discover practical AI tools they can run locally or self-host at home. It is designed for both technical and non-technical users, with clear categories, search, favorites, and essential project details.
 
 The interface follows a dark arctic visual identity inspired by the Hey Initium channel design: black surfaces, icy blue accents, controlled gold highlights, and a clean futuristic layout.
 
@@ -27,7 +27,7 @@ The interface follows a dark arctic visual identity inspired by the Hey Initium 
 - Responsive Tailwind UI built for desktop, tablet, and mobile.
 - English and French interface with typed translation parity.
 - Browser-persisted favorites and language preference.
-- License, commercial-use status, and verification source disclosure on each project card.
+- Essential project cards with category, use case, license context, tags, and useful links.
 - Custom SVG favicon and premium dark visual system.
 
 ## 🛠️ Tech Stack

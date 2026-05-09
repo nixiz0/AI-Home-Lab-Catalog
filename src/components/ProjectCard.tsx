@@ -21,7 +21,6 @@ export function ProjectCard({ project, isFavorite, onToggleFavorite }: ProjectCa
           </div>
           <div className="min-w-0">
             <h3 className="truncate text-lg font-black leading-tight text-text-primary">{project.name}</h3>
-            <p className="mt-1 text-xs font-black uppercase text-steel-blue">{t(`difficulty.${project.difficulty}`)}</p>
           </div>
         </div>
 
@@ -88,31 +87,7 @@ export function ProjectCard({ project, isFavorite, onToggleFavorite }: ProjectCa
         ))}
       </div>
 
-      <details className="mt-4 border-t border-white/10 pt-3">
-        <summary className="cursor-pointer text-xs font-black uppercase text-ice-blue marker:text-bright-gold">
-          {t("card.sources")} ({project.sourceRefs.length})
-        </summary>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {project.sourceRefs.map((sourceRef, index) => (
-            <a
-              className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/10 px-2.5 text-xs font-bold text-text-secondary transition hover:border-ice-blue/35 hover:text-ice-blue"
-              href={sourceRef}
-              target="_blank"
-              rel="noreferrer"
-              key={sourceRef}
-              aria-label={`${project.name} ${t("card.sources")} ${index + 1}`}
-            >
-              <ExternalLink size={14} />
-              {t("card.source")} {index + 1}
-            </a>
-          ))}
-        </div>
-      </details>
-
       <div className="mt-auto flex flex-col gap-3 pt-5 text-xs font-bold text-text-secondary sm:flex-row sm:items-center sm:justify-between">
-        <span className="whitespace-nowrap">
-          {t("card.verified")} {project.verifiedAt}
-        </span>
         <div className="flex flex-wrap gap-2 sm:justify-end">
           <a
             className="inline-flex min-h-8 items-center gap-1.5 rounded-md border border-white/10 px-2.5 text-text-primary transition hover:border-ice-blue/35 hover:text-ice-blue"
@@ -166,10 +141,5 @@ function opennessClass(openness: OpennessStatus) {
 }
 
 function categoryKey(categoryId: string) {
-  const keys: Record<string, string> = {
-    "local-server": "localServer",
-    "image-generation": "imageGeneration",
-  };
-
-  return keys[categoryId] ?? categoryId;
+  return categoryId;
 }
