@@ -2,6 +2,7 @@ export type CategoryId =
   | "all"
   | "apps"
   | "models"
+  | "servers"
   | "images"
   | "workflows";
 
@@ -11,7 +12,7 @@ export type OpennessStatus = "open-source" | "source-available" | "proprietary-f
 
 export type Category = {
   id: CategoryId;
-  icon: "all" | "apps" | "models" | "images" | "workflows";
+  icon: "all" | "apps" | "models" | "servers" | "images" | "workflows";
   labelKey: string;
 };
 

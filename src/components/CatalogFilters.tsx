@@ -4,6 +4,7 @@ import {
   Heart,
   Image,
   LayoutDashboard,
+  ServerCog,
   Workflow,
 } from "lucide-react";
 import { useI18n } from "../i18n/I18nProvider";
@@ -24,6 +25,7 @@ const categoryIcons = {
   all: Boxes,
   apps: LayoutDashboard,
   models: Cpu,
+  servers: ServerCog,
   images: Image,
   workflows: Workflow,
 };

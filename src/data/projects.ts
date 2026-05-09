@@ -21,7 +21,7 @@ export const projects: Project[] = [
   {
     id: "ollama",
     name: "Ollama",
-    categoryIds: ["models"],
+    categoryIds: ["servers"],
     summaryKey: "project.ollama.summary",
     needsKey: "project.ollama.needs",
     licenseNoteKey: "project.ollama.licenseNote",
@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     id: "vllm",
     name: "vLLM",
-    categoryIds: ["models"],
+    categoryIds: ["servers"],
     summaryKey: "project.vllm.summary",
     needsKey: "project.vllm.needs",
     licenseNoteKey: "project.vllm.licenseNote",
