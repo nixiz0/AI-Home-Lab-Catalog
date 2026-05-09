@@ -153,7 +153,7 @@ export const en = {
     "Distributed AI compute framework for scaling Python tasks, datasets, training, tuning, reinforcement learning, and model serving.",
   "advanced.resource.ray.fit": "Scaling local workloads to a workstation or cluster when experiments need more CPU, GPU, or concurrency.",
   "advanced.resource.arena.summary":
-    "Public model comparison platform, formerly LMArena and Chatbot Arena, using community pairwise preference signals and leaderboards.",
+    "Public AI model comparison platform from UC Berkeley researchers, now Arena, using community feedback and leaderboards.",
   "advanced.resource.arena.fit": "Checking how frontier and open models compare in real prompts before choosing what to run or test locally.",
   "advanced.resource.matplotlib.summary":
     "Core Python plotting library for publication-quality static, animated, and interactive figures across notebooks and scripts.",

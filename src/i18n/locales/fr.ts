@@ -155,7 +155,7 @@ export const fr = {
     "Framework de calcul IA distribue pour scaler taches Python, datasets, entrainement, tuning, reinforcement learning et serving.",
   "advanced.resource.ray.fit": "Scaler les workloads locaux vers workstation ou cluster quand les experiences demandent plus de CPU, GPU ou concurrence.",
   "advanced.resource.arena.summary":
-    "Plateforme publique de comparaison de modeles, anciennement LMArena et Chatbot Arena, basee sur preferences pairwise et leaderboards.",
+    "Plateforme publique de comparaison de modeles IA issue de chercheurs UC Berkeley, maintenant Arena, basee sur feedback communautaire et leaderboards.",
   "advanced.resource.arena.fit": "Verifier comment modeles frontier et open se comparent sur vrais prompts avant de choisir quoi lancer ou tester localement.",
   "advanced.resource.matplotlib.summary":
     "Bibliotheque Python centrale pour creer des figures statiques, animees et interactives de qualite publication dans notebooks et scripts.",
