@@ -61,7 +61,7 @@ export const fr = {
   "commercial.friendly": "Compatible usage commercial",
   "commercial.caution": "Obligations à vérifier",
   "commercial.restricted": "Usage restreint",
-  "commercial.proprietary": "Gratuit pour un usage professionnel",
+  "commercial.proprietary": "Gratuit perso + travail",
   "advanced.eyebrow": "Lab technique",
   "advanced.title": "Lab d'ingénierie IA",
   "advanced.subtitle":
@@ -194,7 +194,7 @@ export const fr = {
     "Application de bureau pour découvrir, télécharger, utiliser en chat et servir des LLM locaux sur Windows, macOS et Linux.",
   "project.lmStudio.needs": "Une expérience de bureau accessible avec serveur local et configuration minimale.",
   "project.lmStudio.licenseNote":
-    "Gratuit pour un usage personnel et professionnel, mais l'application est propriétaire ; les licences des modèles chargés s'appliquent séparément.",
+    "Gratuit pour un usage personnel et professionnel interne, mais l'application est propriétaire ; les fonctions Team/Enterprise et les licences des modèles chargés restent séparées.",
   "project.anythingLlm.summary":
     "Application LLM complète centrée sur le local, avec chat, RAG, indexation de fichiers, agents, prise en charge multi-modèles et options de bureau ou Docker.",
   "project.anythingLlm.needs": "Un espace privé complet pour documents, chat d'équipe, outils d'agents et fournisseurs personnalisés.",

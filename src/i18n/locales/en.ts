@@ -59,7 +59,7 @@ export const en = {
   "commercial.friendly": "Commercial-friendly",
   "commercial.caution": "Check obligations",
   "commercial.restricted": "Restricted use",
-  "commercial.proprietary": "Free for work",
+  "commercial.proprietary": "Free home + work",
   "advanced.eyebrow": "Technical lab",
   "advanced.title": "AI engineer lab",
   "advanced.subtitle":
@@ -192,7 +192,7 @@ export const en = {
     "Desktop app for discovering, downloading, chatting with, and serving local LLMs on Windows, macOS, and Linux.",
   "project.lmStudio.needs": "A beginner-friendly desktop workflow with local server support and minimal setup.",
   "project.lmStudio.licenseNote":
-    "Free for personal and work use, but the app is proprietary; loaded model licenses still apply separately.",
+    "Free for home and internal business use, but the app is proprietary; Team/Enterprise features and loaded model licenses remain separate.",
   "project.anythingLlm.summary":
     "Full-stack LLM app with local-first chat, RAG, file indexing, agents, multi-model support, and desktop or Docker options.",
   "project.anythingLlm.needs": "A complete private workspace for documents, team chat, agent tools, and custom providers.",
