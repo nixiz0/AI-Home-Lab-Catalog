@@ -19,8 +19,6 @@
 
 AI Home Lab Catalog helps people discover practical AI tools they can run locally or self-host at home. It is designed for both technical and non-technical users, with clear categories, search, favorites, and essential project details.
 
-The interface follows a dark arctic visual identity inspired by the Hey Initium channel design: black surfaces, icy blue accents, controlled gold highlights, and a clean futuristic layout.
-
 ## ⚡ Highlights
 
 - Curated catalog of local AI interfaces, inference servers, RAG tools, voice models, image generators, automations, and agent frameworks.
