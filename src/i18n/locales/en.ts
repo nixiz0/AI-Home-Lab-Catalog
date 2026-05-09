@@ -3,6 +3,7 @@ export const en = {
   "nav.label": "Main navigation",
   "nav.catalog": "Catalog",
   "nav.advanced": "AI engineer lab",
+  "language.label": "Language",
   "footer.tagline": "Curated by Initium for private local AI builders.",
   "footer.social.label": "Social",
   "footer.social.youtube": "YouTube",

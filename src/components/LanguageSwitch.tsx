@@ -4,14 +4,14 @@ import { cn } from "../utils/classNames";
 
 const languageOptions: Array<{ locale: Locale; label: string; title: string }> = [
   { locale: "en", label: "EN", title: "English" },
-  { locale: "fr", label: "FR", title: "Francais" },
+  { locale: "fr", label: "FR", title: "Français" },
 ];
 
 export function LanguageSwitch() {
-  const { locale, setLocale } = useI18n();
+  const { locale, setLocale, t } = useI18n();
 
   return (
-    <div className="inline-flex items-center gap-1 rounded-lg border border-ice-blue/15 bg-black/35 p-1" aria-label="Language">
+    <div className="inline-flex items-center gap-1 rounded-lg border border-ice-blue/15 bg-black/35 p-1" aria-label={t("language.label")}>
       {languageOptions.map((option) => (
         <button
           key={option.locale}
